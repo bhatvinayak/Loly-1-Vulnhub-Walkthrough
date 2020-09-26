@@ -64,3 +64,9 @@ From the scan we get to know the username `loly` , let's bruteforce it with wpsc
 ![Screenshot](8.png)
 
 ![Screenshot](9.png)
+
+We successfully got the password for the username. Let's login with the credentials.
+
+**Step 6: Login to wp-admin**
+
+![Screenshot](10.png)
