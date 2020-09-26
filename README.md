@@ -85,6 +85,18 @@ Start listening to the mentioned port and then open the shell in the browser
 
 ![Screenshot](12.png)
 
+After getting the shell, trying to get shell from python one-liner to get a clear picture.
+
 ![Screenshot](14.png)
 
 ![Screenshot](15.png)
+
+From the `wp-config.php` file we got the password `lolyisabeautifulgirl`
+
+Trying to get to know whom this password belongs to.
+
+![Screenshot](16.png)
+
+Looks like it belongs to `loly` 
+
+![Screenshot](17.png)
