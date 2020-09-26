@@ -71,8 +71,14 @@ We successfully got the password for the username. Let's login with the credenti
 
 ![Screenshot](10.png)
 
-**Step 7: Exploiting **
+**Step 7: Exploiting**
 
 ![Screenshot](11.png)
 
 Uploading a php reverse shell but it's in zip format as the admin panel accepts zip format and automatically unzips the file.
+
+**Step 8: Access the shell**
+
+![Screenshot](12.png)
+
+![Screenshot](13.png)
