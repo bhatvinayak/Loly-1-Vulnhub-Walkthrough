@@ -54,3 +54,11 @@ Hence, we need to add the entry in /etc/hosts file as shown in the image below. 
 **Step 4: Run wpscan**
 
 ![Screenshot](6.png)
+
+![Screenshot](7.png)
+
+From the scan we get to know the username `loly` , let's bruteforce it with wpscan.
+
+**Step 5: Bruteforce the password**
+
+![Screenshot](8.png)
