@@ -47,7 +47,7 @@ From the scan we can see that this is a wordpress site.
 
 But the website is not properly responding, may be because of domain name mapping.
 
-Hence, we need to add the entry in /etc/hosts file as shown in the image below. This entry will not only browse the page in an efficient way but will also help us to run wpscan on the next screen.
+Hence, we need to add the entry in `/etc/hosts` file as shown in the image below. This entry will not only browse the page in an efficient way but will also help us to run wpscan on the next screen.
 
 ![Screenshot](5.png)
 
@@ -119,6 +119,7 @@ Looks like it belongs to `loly`.
 Login to `loly`.
 
 > su loly
+
 Type `lolyisabeautifulgirl` for password
 
 > lsb_release -a
@@ -126,6 +127,7 @@ Type `lolyisabeautifulgirl` for password
 The `lsb_release` command displays LSB (Linux Standard Base) information about specific Linux distribution, including version number, release codename, and distributor ID.
 
 > uname a-
+
 Next, we will run the `uname` command to know about the Linux kernel version and some other information so we should have enough evidence about the system for Privilege Escalation.
 
 ![Screenshot](17.png)
