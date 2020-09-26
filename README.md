@@ -97,6 +97,18 @@ Trying to get to know whom this password belongs to.
 
 ![Screenshot](16.png)
 
-Looks like it belongs to `loly` 
+Looks like it belongs to `loly`.
+
+**Step 9: Privilage escalation**
+
+Login to `loly`.
+
+The lsb_release command displays LSB (Linux Standard Base) information about specific Linux distribution, including version number, release codename, and distributor ID.
+
+Next, we will run the uname command to know about the Linux kernel version and some other information so we should have enough evidence about the system for Privilege Escalation.
 
 ![Screenshot](17.png)
+
+Now we know that Ubuntu 4.4.0 is running on the victim's machine. Let's try to find out the exploit related to this version.
+
+![Screenshot](18.png)
