@@ -79,6 +79,10 @@ Uploading a php reverse shell but it's in zip format as the admin panel accepts 
 
 **Step 8: Access the shell**
 
-![Screenshot](12.png)
+Start listening to the mentioned port and then open the shell in the browser
 
 ![Screenshot](13.png)
+
+![Screenshot](12.png)
+
+
