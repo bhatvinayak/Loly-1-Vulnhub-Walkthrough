@@ -112,3 +112,9 @@ Next, we will run the uname command to know about the Linux kernel version and s
 Now we know that Ubuntu 4.4.0 is running on the victim's machine. Let's try to find out the exploit related to this version.
 
 ![Screenshot](18.png)
+
+There is an exploit related to that version and we can use that.  We have to copy the exploit to the victim's machine for that we are using the python simple http server.
+
+![Screenshot](19.png)
+
+![Screenshot](20.png)
