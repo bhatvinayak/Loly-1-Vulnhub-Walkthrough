@@ -62,3 +62,5 @@ From the scan we get to know the username `loly` , let's bruteforce it with wpsc
 **Step 5: Bruteforce the password**
 
 ![Screenshot](8.png)
+
+![Screenshot](9.png)
