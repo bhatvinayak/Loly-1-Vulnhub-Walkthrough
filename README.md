@@ -49,5 +49,8 @@ But the website is not properly responding, may be because of domain name mappin
 
 Hence, we need to add the entry in /etc/hosts file as shown in the image below. This entry will not only browse the page in an efficient way but will also help us to run wpscan on the next screen.
 
-
 ![Screenshot](5.png)
+
+**Step 4: Run wpscan**
+
+![Screenshot](6.png)
