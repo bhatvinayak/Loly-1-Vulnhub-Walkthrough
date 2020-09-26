@@ -44,3 +44,10 @@ This doesn't help us much! Let's try bruteforcing the IP with dirb.
 From the scan we can see that this is a wordpress site.
 
 ![Screenshot](4.png)
+
+But the website is not properly responding, may be because of domain name mapping.
+
+Hence, we need to add the entry in /etc/hosts file as shown in the image below. This entry will not only browse the page in an efficient way but will also help us to run wpscan on the next screen.
+
+
+![Screenshot](5.png)
