@@ -115,6 +115,10 @@ Now we know that Ubuntu 4.4.0 is running on the victim's machine. Let's try to f
 
 There is an exploit related to that version and we can use that.  We have to copy the exploit to the victim's machine for that we are using the python simple http server.
 
+In the reverse shell we obtained, we'll download the exploit file and compile it and we will use the `chmod` command to make the file readable, writable, and executable.
+
 ![Screenshot](19.png)
+
+Move into the root folder and reveal the flag!!
 
 ![Screenshot](20.png)
